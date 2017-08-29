@@ -15,7 +15,7 @@ def metropolis(N):
     r = np.zeros(1)
     p = q(r[0])
     pts = []
-    
+
     for i in range(N):
         rn = r + np.random.uniform(-1,1)
         pn = q(rn[0])
@@ -28,14 +28,18 @@ def metropolis(N):
                 p = pn
                 r = rn
         pts.append(r)
-    
+
     pts = np.array(pts)
     return pts
-    
+
 def hist_plot(array):
     fig = plt.figure()
     ax = fig.add_subplot(1,1,1,)
-    ax.hist(array, bins=1000)    
+    ax.hist(array, bins=1000)
     plt.title('')
     plt.xlabel('')
     plt.ylabel('')
+    plt.show()
+
+array = metropolis(N)
+hist_plot(array)
