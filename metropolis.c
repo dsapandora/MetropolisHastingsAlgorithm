@@ -14,7 +14,7 @@ double MU = 0.0;
 double SIG = 1.0;
 
 int main(void) {
-    metropolis(N,pts)
+    metropolis(N,pts);
     printf("DONE/n/r");
 
     FILE *fp;
@@ -25,10 +25,8 @@ int main(void) {
          //fprintf(fp, "%Lf\n", pts[j]);
     }
     fclose(fp);
-    
-    return EXIT_SUCCESS;
-}
 
+    return EXIT_SUCCESS;
 }
 
 double q(double x) { //Gaussian
